@@ -17,282 +17,282 @@
 
 
 
-RecipeOntology:BeefSliders rdf:type schema:Recipe ;
-										RecipeOntology:hasTitle	"All American Beef Sliders"^^xsd:string;
-										schema:image	"https://www.lordbyronskitchen.com/wp-content/uploads/2020/05/Dry-Rub-Baked-Chicken-Wings-b-532x800.jpg"^^xsd:string;
-										schema:author RecipeOntology:person1, [
-                                          			rdf:type RecipeOntology:Person;
-													schema:name "Lord Byron's Kitchen"^^xsd:string];
-									   schema:cookingMethod	RecipeOntology:Baking;
-										RecipeOntology:wasDerivedFrom [
-                                          				rdf:type RecipeOntology:Source;
-                                                             schema:url	"https://www.lordbyronskitchen.com/wprm_print/19181"^^xsd:anyURI];
-										schema:aggregateRating [
+RecipeOntology:DryRubBakedChickenWings rdf:type schema:Recipe ;
+                                        RecipeOntology:hasTitle "Dry Rub Baked Chicken Wings"^^xsd:string;
+                                        schema:image    "https://www.lordbyronskitchen.com/wp-content/uploads/2020/05/Dry-Rub-Baked-Chicken-Wings-b-532x800.jpg"^^xsd:string;
+                                        schema:author [
+                                                    rdf:type RecipeOntology:Person;
+                                                    rdf:type RecipeOntology:Author;        
+                                                    schema:name "Lord Byron's Kitchen"^^xsd:string];
+                                       
+                                        RecipeOntology:wasDerivedFrom [
+                                                        rdf:type RecipeOntology:Source;
+                                                        schema:url  "https://www.lordbyronskitchen.com/wprm_print/19181"^^xsd:anyURI];
+                                        schema:aggregateRating [
                                           rdf:type schema:AggregateRating;
+                                          rdf:type RecipeOntology:RecipeRating;         
                                                    schema:reviewCount 20;
                                                    schema:ratingCount 3.6];
-										RecipeOntology:hasDifficultyLevel [
-                                        			rdf:type RecipeOntology:DifficultyLevel;
-                                        			RecipeOntology:difficultyLevel "easy"^^xsd:string];
-										RecipeOntology:hasMealType RecipeOntology:Snack;
-										RecipeOntology:RecipeCuisine RecipeOntology:North_American;
-										RecipeOntology:RecipeType RecipeOntology:Appetizer;
-										RecipeOntology:hasTotalTime [
-                                          			rdf:type RecipeOntology:TotalTime;
+                                        RecipeOntology:hasDifficultyLevel [
+                                                    rdf:type RecipeOntology:DifficultyLevel;
+                                                    RecipeOntology:difficultyLevel "easy"^^xsd:string];
+                                        RecipeOntology:hasMealType [
+                                                    rdf:type RecipeOntology:MealType;
+                                                    rdf:type RecipeOntology:Snack];
+                                        RecipeOntology:RecipeCuisine [
+                                                    rdf:type    RecipeOntology:AmericanCuisine;
+                                                    rdf:type    RecipeOntology:RecipeCuisine];
+                                        RecipeOntology:RecipeType [
+                                                    rdf:type    RecipeOntology:Appetizer;
+                                                    rdf:type    RecipeOntology:RecipeCourse];
+                                        RecipeOntology:hasTotalTime [
+                                                    rdf:type RecipeOntology:TotalTime;
+                                                    rdf:type schema:Time;        
                                                              RecipeOntology:hasCookTime [
-                                                               rdf:type RecipeOntology:CookTime; 
-                                                               RecipeOntology:cookTime "50 Minutes"^^xsd:string;
-                                                                        RecipeOntology:chillTime "30 Minutes"^^xsd:string];
+                                                                rdf:type RecipeOntology:CookTime; 
+                                                                RecipeOntology:cookTime "50 Minutes"^^xsd:string;
+                                                                RecipeOntology:chillTime "30 Minutes"^^xsd:string];
                                                              RecipeOntology:hasPrepTime [
-                                                             rdf:type RecipeOntology:PrepTime;
-                                                             RecipeOntology:prepTime "10 Minutes"^^xsd:string]];
-										schema:recipeYield ex:FoodProduct;
-										RecipeOntology:produceQuantityOfFood	[
-                                          							rdf:type RecipeOntology:QuantityOfFood;
-                                                                    RecipeOntology:ofFoodProduct	ex:FoodProduct;
-                                                                    RecipeOntology:ofFoodQuantity	[
-                                                                  						rdf:type RecipeOntology:Quantity;
-                                                                                        RecipeOntology:hasValue 6;
-                                                                                        RecipeOntology:hasUnit "serving"^^xsd:string]];
-										schema:hasRecipeInstructions	ex:Instructions;
-										schema:recipeIngredient	[	
-                                          					rdf:type RecipeOntology:Ingredient;
-                                                            RecipeOntology:usedInRecipe	RecipeOntology:DryRubBakedChickenWings;
-                                                            RecipeOntology:hasIngredientType RecipeOntology:Flavorings;
+                                                                rdf:type RecipeOntology:PrepTime;
+                                                                RecipeOntology:prepTime "10 Minutes"^^xsd:string]];
+                                        schema:recipeYield [
+                                                   rdf:type RecipeOntology:Quantity;
+                                                   rdf:type RecipeOntology:YieldQuantity;         
+                                                   RecipeOntology:hasValue 6;
+                                                   RecipeOntology:hasUnit "serving"^^xsd:string];
+                                        schema:hasRecipeInstructions [
+                                                    rdf:type RecipeOntology:Instruction;
+                                                    schema:hasRecipeInstructions "Preheat oven to 450 degrees.  Line a large baking sheet with parchment paper.  Place a wire cooling rack onto the baking sheet. Set aside."^^xsd:string,
+                                                    "Wash wings in cold water and pat thoroughly dry with paper towels."^^xsd:string,
+                                                    "Place the wings into a bowl and toss well with the vegetable oil until well coated."^^xsd:string,
+                                                    "Whisk together the brown sugar, chipotle powder, chili powder, oregano, dry mustard, seasoning salt, salt, and ground black pepper."^^xsd:string,
+                                                    "Pour the dry rub over the chicken wings and massage until very well coated. Marinate in the fridge for 30 minutes."^^xsd:string,
+                                                    "Generously coat the wire rack with the non-stick cooking spray. Then, place each wing onto the rack in a single layer. Do not over lap."^^xsd:string,
+                                                    "Bake for 50 minutes. Remove from oven and plate. Garnish and serve immediately."^^xsd:string];
+                                        schema:recipeIngredient [   
+                                                            rdf:type RecipeOntology:Ingredient;
+                                                            RecipeOntology:usedInRecipe RecipeOntology:DryRubBakedChickenWings;
+                                                            RecipeOntology:hasIngredientType RecipeOntology:Spice;
                                                             RecipeOntology:hasIngredientName "brown sugar"^^xsd:String;
                                                             RecipeOntology:hasIngredientQuantity [
-                                                              							rdf:type RecipeOntology:Quantity;
+                                                                                        rdf:type RecipeOntology:Quantity;
+                                                                                        rdf:type RecipeOntology:IngredientQuantity;         
                                                                                         RecipeOntology:hasValue 1;
                                                                                         RecipeOntology:hasUnit "tablespoon"^^xsd:string]], 
-															[	
-                                          					rdf:type RecipeOntology:Ingredient;
-                                                            RecipeOntology:usedInRecipe	RecipeOntology:DryRubBakedChickenWings;
-                                                            RecipeOntology:hasIngredientType RecipeOntology:Flavorings;
+                                                            [   
+                                                            rdf:type RecipeOntology:Ingredient;
+                                                            RecipeOntology:usedInRecipe RecipeOntology:DryRubBakedChickenWings;
+                                                            RecipeOntology:hasIngredientType RecipeOntology:Spice;
                                                             RecipeOntology:hasIngredientName "Chipotle powder"^^xsd:String;
                                                             RecipeOntology:hasIngredientQuantity [
-                                                              							rdf:type RecipeOntology:Quantity;
+                                                                                        rdf:type RecipeOntology:Quantity;
                                                                                         RecipeOntology:hasValue 1;
                                                                                         RecipeOntology:hasUnit "teaspoon"^^xsd:string]], 
-															[	
-                                          					rdf:type RecipeOntology:Ingredient;
-                                                            RecipeOntology:usedInRecipe	RecipeOntology:DryRubBakedChickenWings;
-                                                            RecipeOntology:hasIngredientType RecipeOntology:Flavorings;
+                                                            [   
+                                                            rdf:type RecipeOntology:Ingredient;
+                                                            RecipeOntology:usedInRecipe RecipeOntology:DryRubBakedChickenWings;
+                                                            RecipeOntology:hasIngredientType RecipeOntology:Spice;
                                                             RecipeOntology:hasIngredientName "Chilli powder"^^xsd:String;
                                                             RecipeOntology:hasIngredientQuantity [
-                                                              							rdf:type RecipeOntology:Quantity;
+                                                                                        rdf:type RecipeOntology:Quantity;
                                                                                         RecipeOntology:hasValue 1;
                                                                                         RecipeOntology:hasUnit "teaspoon"^^xsd:string]], 
-															[	
-                                          					rdf:type RecipeOntology:Ingredient;
-                                                            RecipeOntology:usedInRecipe	RecipeOntology:DryRubBakedChickenWings;
-                                                            RecipeOntology:hasIngredientType RecipeOntology:Flavorings;
+                                                            [   
+                                                            rdf:type RecipeOntology:Ingredient;
+                                                            RecipeOntology:usedInRecipe RecipeOntology:DryRubBakedChickenWings;
+                                                            RecipeOntology:hasIngredientType RecipeOntology:SideIngredient;
                                                             RecipeOntology:hasIngredientName "Oregano"^^xsd:String;
                                                             RecipeOntology:hasIngredientQuantity [
-                                                              							rdf:type RecipeOntology:Quantity;
+                                                                                        rdf:type RecipeOntology:Quantity;
                                                                                         RecipeOntology:hasValue 1;
                                                                                         RecipeOntology:hasUnit "teaspoon"^^xsd:string]], 
-															[	
-                                          					rdf:type RecipeOntology:Ingredient;
-                                                            RecipeOntology:usedInRecipe	RecipeOntology:DryRubBakedChickenWings;
-                                                            RecipeOntology:hasIngredientType RecipeOntology:Flavorings;
+                                                            [   
+                                                            rdf:type RecipeOntology:Ingredient;
+                                                            RecipeOntology:usedInRecipe RecipeOntology:DryRubBakedChickenWings;
+                                                            RecipeOntology:hasIngredientType RecipeOntology:SideIngredient;
                                                             RecipeOntology:hasIngredientName "Mustard"^^xsd:String;
                                                             RecipeOntology:hasIngredientQuantity [
-                                                              							rdf:type RecipeOntology:Quantity;
+                                                                                        rdf:type RecipeOntology:Quantity;
                                                                                         RecipeOntology:hasValue 1;
                                                                                         RecipeOntology:hasUnit "teaspoon"^^xsd:string]], 
-															[	
-                                          					rdf:type RecipeOntology:Ingredient;
-                                                            RecipeOntology:usedInRecipe	RecipeOntology:DryRubBakedChickenWings;
-                                                            RecipeOntology:hasIngredientType RecipeOntology:Flavorings;
+                                                            [   
+                                                            rdf:type RecipeOntology:Ingredient;
+                                                            RecipeOntology:usedInRecipe RecipeOntology:DryRubBakedChickenWings;
+                                                            RecipeOntology:hasIngredientType RecipeOntology:Spice;
                                                             RecipeOntology:hasIngredientName "seasoning salt"^^xsd:String;
                                                             RecipeOntology:hasIngredientQuantity [
-                                                              							rdf:type RecipeOntology:Quantity;
+                                                                                        rdf:type RecipeOntology:Quantity;
                                                                                         RecipeOntology:hasValue 0.5;
                                                                                         RecipeOntology:hasUnit "teaspoon"^^xsd:string]], 
-															[	
-                                          					rdf:type RecipeOntology:Ingredient;
-                                                            RecipeOntology:usedInRecipe	RecipeOntology:DryRubBakedChickenWings;
-                                                            RecipeOntology:hasIngredientType RecipeOntology:Flavorings;
+                                                            [   
+                                                            rdf:type RecipeOntology:Ingredient;
+                                                            RecipeOntology:usedInRecipe RecipeOntology:DryRubBakedChickenWings;
+                                                            RecipeOntology:hasIngredientType RecipeOntology:Spice;
                                                             RecipeOntology:hasIngredientName "salt"^^xsd:String;
                                                             RecipeOntology:hasIngredientQuantity [
-                                                              							rdf:type RecipeOntology:Quantity;
+                                                                                        rdf:type RecipeOntology:Quantity;
                                                                                         RecipeOntology:hasValue 0.5;
                                                                                         RecipeOntology:hasUnit "teaspoon"^^xsd:string]], 
-															[	
-                                          					rdf:type RecipeOntology:Ingredient;
-                                                            RecipeOntology:usedInRecipe	RecipeOntology:DryRubBakedChickenWings;
-                                                            RecipeOntology:hasIngredientType RecipeOntology:Flavorings;
+                                                            [   
+                                                            rdf:type RecipeOntology:Ingredient;
+                                                            RecipeOntology:usedInRecipe RecipeOntology:DryRubBakedChickenWings;
+                                                            RecipeOntology:hasIngredientType RecipeOntology:Spice;
                                                             RecipeOntology:hasIngredientName "ground black pepper"^^xsd:String;
                                                             RecipeOntology:hasIngredientQuantity [
-                                                              							rdf:type RecipeOntology:Quantity;
+                                                                                        rdf:type RecipeOntology:Quantity;
                                                                                         RecipeOntology:hasValue 0.5;
                                                                                         RecipeOntology:hasUnit "teaspoon"^^xsd:string]], 
-															[	
-                                          					rdf:type RecipeOntology:Ingredient;
-                                                            RecipeOntology:usedInRecipe	RecipeOntology:DryRubBakedChickenWings;
-                                                            RecipeOntology:hasIngredientType RecipeOntology:Fats_and_Oils;
+                                                            [   
+                                                            rdf:type RecipeOntology:Ingredient;
+                                                            RecipeOntology:usedInRecipe RecipeOntology:DryRubBakedChickenWings;
                                                             RecipeOntology:hasIngredientName "Vegetable Oil"^^xsd:String;
                                                             RecipeOntology:hasIngredientQuantity [
-                                                              							rdf:type RecipeOntology:Quantity;
+                                                                                        rdf:type RecipeOntology:Quantity;
                                                                                         RecipeOntology:hasValue 2;
                                                                                         RecipeOntology:hasUnit "tablespoon"^^xsd:string]], 
-															[	
-                                          					rdf:type RecipeOntology:Ingredient;
-                                                            RecipeOntology:usedInRecipe	RecipeOntology:DryRubBakedChickenWings;
-                                                            RecipeOntology:hasIngredientType RecipeOntology:Fats_and_Oils;
+                                                            [   
+                                                            rdf:type RecipeOntology:Ingredient;
+                                                            RecipeOntology:usedInRecipe RecipeOntology:DryRubBakedChickenWings;
                                                             RecipeOntology:hasIngredientName "Non-stick cooking spray"^^xsd:String;
                                                             ],
-															ex:Ingredient;
-										RecipeOntology:hasMainIngredient	ex:ingredient.
-
-
-ex:Ingredient	rdf:type RecipeOntology:Ingredient;
-                RecipeOntology:usedInRecipe	RecipeOntology:DryRubBakedChickenWings;
-                RecipeOntology:hasIngredientType RecipeOntology:Meat;
-                RecipeOntology:hasIngredientName "Chicken wings"^^xsd:String;
-                RecipeOntology:hasIngredientQuantity [
-                                        rdf:type RecipeOntology:Quantity;
-                                        RecipeOntology:hasValue 24;
-                                        RecipeOntology:hasUnit "piece"^^xsd:string].
-
-
-                                                                             
-
-
-ex:FoodProduct rdf:type RecipeOntology:FoodProduct;
-				RecipeOntology:hasNutritionalInformation [
-                  						rdf:type schema:NutritionInformation;
-                            			RecipeOntology:hasNutritionContent [
-                                          						rdf:type RecipeOntology:NutritionContent;
-                                                                RecipeOntology:ofNutritionType	RecipeOntology:Calories;
-                                                                RecipeOntology:ofNutritionQuantity [
-                                                                  						rdf:type RecipeOntology:Quantity;
+                                                            [   
+                                                            rdf:type RecipeOntology:Ingredient;
+                                                            RecipeOntology:usedInRecipe RecipeOntology:DryRubBakedChickenWings;
+                                                            RecipeOntology:hasIngredientType RecipeOntology:MainIngredient;
+                                                            RecipeOntology:hasIngredientName "Chicken wings"^^xsd:String;
+                                                            RecipeOntology:hasIngredientQuantity [
+                                                                                    rdf:type RecipeOntology:Quantity;
+                                                                                    RecipeOntology:hasValue 24;
+                                                                                    RecipeOntology:hasUnit "piece"^^xsd:string]];
+                                            RecipeOntology:hasNutritionContent [
+                                                                rdf:type RecipeOntology:Nutrition;
+                                                                RecipeOntology:nutrientName "Calories"^^xsd:String;
+                                                                RecipeOntology:hasNutritionQuantity [
+                                                                                        rdf:type RecipeOntology:Quantity;
+                                                                                        rdf:type RecipeOntology:NutritionQuantity;         
                                                                                         RecipeOntology:hasValue 479;
                                                                                         RecipeOntology:hasUnit "kcal"^^xsd:string]],
-                										
-                  															[
-                                          						rdf:type RecipeOntology:NutritionContent;
-                                                                RecipeOntology:ofNutritionType	RecipeOntology:Carbohydrates;
-                                                                RecipeOntology:ofNutritionQuantity [
-                                                                  						rdf:type RecipeOntology:Quantity;
+                                                                [
+                                                                rdf:type RecipeOntology:Nutrition;
+                                                                rdf:type RecipeOntology:Carbohydrates;         
+                                                                RecipeOntology:nutrientName "Carbohydrates"^^xsd:String;
+                                                                RecipeOntology:hasNutritionQuantity [
+                                                                                        rdf:type RecipeOntology:Quantity;
+                                                                                        rdf:type RecipeOntology:NutritionQuantity; 
                                                                                         RecipeOntology:hasValue 3;
                                                                                         RecipeOntology:hasUnit "grams"^^xsd:string]],
-                										
-                  															[
-                                          						rdf:type RecipeOntology:NutritionContent;
-                                                                RecipeOntology:ofNutritionType	RecipeOntology:Protein;
-                                                                RecipeOntology:ofNutritionQuantity [
-                                                                  						rdf:type RecipeOntology:Quantity;
+                                                        
+                                                                            [
+                                                                rdf:type RecipeOntology:Nutrition;
+                                                                RecipeOntology:nutrientName "Protein"^^xsd:String;
+                                                                RecipeOntology:hasNutritionQuantity [
+                                                                                        rdf:type RecipeOntology:Quantity;
+                                                                                        rdf:type RecipeOntology:NutritionQuantity; 
                                                                                         RecipeOntology:hasValue 35;
                                                                                         RecipeOntology:hasUnit "grams"^^xsd:string]],
-                										
-                  															[
-                                          						rdf:type RecipeOntology:NutritionContent;
-                                                                RecipeOntology:ofNutritionType	RecipeOntology:Fat;
-                                                                RecipeOntology:ofNutritionQuantity [
-                                                                  						rdf:type RecipeOntology:Quantity;
+                                                        
+                                                                            [
+                                                                rdf:type RecipeOntology:Nutrition;
+                                                                rdf:type RecipeOntology:Fat;
+                                                                RecipeOntology:nutrientName "Fat"^^xsd:String;
+                                                                RecipeOntology:hasNutritionQuantity [
+                                                                                        rdf:type RecipeOntology:Quantity;
+                                                                                        rdf:type RecipeOntology:NutritionQuantity; 
                                                                                         RecipeOntology:hasValue 36;
                                                                                         RecipeOntology:hasUnit "grams"^^xsd:string]],
-                										
-                  															[
-                                          						rdf:type RecipeOntology:NutritionContent;
-                                                                RecipeOntology:ofNutritionType	RecipeOntology:Saturated_Fat;
-                                                                RecipeOntology:ofNutritionQuantity [
-                                                                  						rdf:type RecipeOntology:Quantity;
+                                                        
+                                                                            [
+                                                                rdf:type RecipeOntology:Nutrition;       
+                                                                rdf:type RecipeOntology:SaturatedFat;
+                                                                RecipeOntology:nutrientName "Fat"^^xsd:String;
+                                                                RecipeOntology:hasNutritionQuantity [
+                                                                                        rdf:type RecipeOntology:Quantity;
+                                                                                        rdf:type RecipeOntology:NutritionQuantity; 
                                                                                         RecipeOntology:hasValue 12;
                                                                                         RecipeOntology:hasUnit "grams"^^xsd:string]],
-                										
-                  															[
-                                          						rdf:type RecipeOntology:NutritionContent;
-                                                                RecipeOntology:ofNutritionType	RecipeOntology:Cholesterol;
-                                                                RecipeOntology:ofNutritionQuantity [
-                                                                  						rdf:type RecipeOntology:Quantity;
+                                                        
+                                                                            [
+                                                                rdf:type RecipeOntology:Nutrition;
+                                                                RecipeOntology:nutrientName "Cholesterol"^^xsd:String;
+                                                                RecipeOntology:hasNutritionQuantity [
+                                                                                        rdf:type RecipeOntology:Quantity;
+                                                                                        rdf:type RecipeOntology:NutritionQuantity; 
                                                                                         RecipeOntology:hasValue 148;
                                                                                         RecipeOntology:hasUnit "milligrams"^^xsd:string]],
-                										
-                  															[
-                                          						rdf:type RecipeOntology:NutritionContent;
-                                                                RecipeOntology:ofNutritionType	RecipeOntology:Sodium;
-                                                                RecipeOntology:ofNutritionQuantity [
-                                                                  						rdf:type RecipeOntology:Quantity;
+                                                        
+                                                                            [
+                                                                rdf:type RecipeOntology:Nutrition;
+                                                                rdf:type RecipeOntology:Mineral;         
+                                                                RecipeOntology:nutrientName "Sodium"^^xsd:String;
+                                                                RecipeOntology:hasNutritionQuantity [
+                                                                                        rdf:type RecipeOntology:Quantity;
+                                                                                        rdf:type RecipeOntology:NutritionQuantity; 
                                                                                         RecipeOntology:hasValue 540;
                                                                                         RecipeOntology:hasUnit "milligrams"^^xsd:string]],
-                										
-                  															[
-                                          						rdf:type RecipeOntology:NutritionContent;
-                                                                RecipeOntology:ofNutritionType	RecipeOntology:Potassium;
-                                                                RecipeOntology:ofNutritionQuantity [
-                                                                  						rdf:type RecipeOntology:Quantity;
+                                                        
+                                                                            [
+                                                                rdf:type RecipeOntology:Nutrition;
+                                                                rdf:type RecipeOntology:Mineral;
+                                                                RecipeOntology:nutrientName "Potassium"^^xsd:String;
+                                                                RecipeOntology:hasNutritionQuantity [
+                                                                                        rdf:type RecipeOntology:Quantity;
+                                                                                        rdf:type RecipeOntology:NutritionQuantity; 
                                                                                         RecipeOntology:hasValue 313;
                                                                                         RecipeOntology:hasUnit "milligrams"^^xsd:string]],
-                										
-                  															[
-                                          						rdf:type RecipeOntology:NutritionContent;
-                                                                RecipeOntology:ofNutritionType	RecipeOntology:Fiber;
-                                                                RecipeOntology:ofNutritionQuantity [
-                                                                  						rdf:type RecipeOntology:Quantity;
+                                                        
+                                                                            [
+                                                                rdf:type RecipeOntology:Nutrition;
+                                                                rdf:type RecipeOntology:Mineral;
+                                                                RecipeOntology:nutrientName "Fiber"^^xsd:String;
+                                                                RecipeOntology:hasNutritionQuantity [
+                                                                                        rdf:type RecipeOntology:Quantity;
+                                                                                        rdf:type RecipeOntology:NutritionQuantity; 
                                                                                         RecipeOntology:hasValue 1;
                                                                                         RecipeOntology:hasUnit "grams"^^xsd:string]],
-                										
-                  															[
-                                          						rdf:type RecipeOntology:NutritionContent;
-                                                                RecipeOntology:ofNutritionType	RecipeOntology:Sugar;
-                                                                RecipeOntology:ofNutritionQuantity [
-                                                                  						rdf:type RecipeOntology:Quantity;
+                                                        
+                                                                            [
+                                                                rdf:type RecipeOntology:Nutrition;
+                                                                RecipeOntology:nutrientName "Sugar"^^xsd:String;
+                                                                RecipeOntology:hasNutritionQuantity [
+                                                                                        rdf:type RecipeOntology:Quantity;
+                                                                                        rdf:type RecipeOntology:NutritionQuantity; 
                                                                                         RecipeOntology:hasValue 2;
                                                                                         RecipeOntology:hasUnit "grams"^^xsd:string]],
-                										
-                  															[
-                                          						rdf:type RecipeOntology:NutritionContent;
-                                                                RecipeOntology:ofNutritionType	RecipeOntology:Vitamin_A;
-                                                                RecipeOntology:ofNutritionQuantity [
-                                                                  						rdf:type RecipeOntology:Quantity;
+                                                        
+                                                                            [
+                                                                rdf:type RecipeOntology:Nutrition;
+                                                                rdf:type RecipeOntology:Vitamin;
+                                                                RecipeOntology:nutrientName "Vitamin_A"^^xsd:String;
+                                                                RecipeOntology:hasNutritionQuantity [
+                                                                                        rdf:type RecipeOntology:Quantity;
+                                                                                        rdf:type RecipeOntology:NutritionQuantity; 
                                                                                         RecipeOntology:hasValue 480;
                                                                                         RecipeOntology:hasUnit "IU"^^xsd:string]],
-                										
-                  															[
-                                          						rdf:type RecipeOntology:NutritionContent;
-                                                                RecipeOntology:ofNutritionType	RecipeOntology:Vitamin_C;
-                                                                RecipeOntology:ofNutritionQuantity [
-                                                                  						rdf:type RecipeOntology:Quantity;
+                                                        
+                                                                            [
+                                                                rdf:type RecipeOntology:Nutrition;
+                                                                rdf:type RecipeOntology:Vitamin;
+                                                                RecipeOntology:nutrientName "Vitamin_C"^^xsd:String;
+                                                                RecipeOntology:hasNutritionQuantity [
+                                                                                        rdf:type RecipeOntology:Quantity;
+                                                                                        rdf:type RecipeOntology:NutritionQuantity; 
                                                                                         RecipeOntology:hasValue 1.3;
                                                                                         RecipeOntology:hasUnit "milligrams"^^xsd:string]],
-                										
-                  															[
-                                          						rdf:type RecipeOntology:NutritionContent;
-                                                                RecipeOntology:ofNutritionType	RecipeOntology:Calcium;
-                                                                RecipeOntology:ofNutritionQuantity [
-                                                                  						rdf:type RecipeOntology:Quantity;
+                                                        
+                                                                            [
+                                                                rdf:type RecipeOntology:Nutrition;
+                                                                RecipeOntology:nutrientName "Calcium"^^xsd:String;
+                                                                RecipeOntology:hasNutritionQuantity [
+                                                                                        rdf:type RecipeOntology:Quantity;
+                                                                                        rdf:type RecipeOntology:NutritionQuantity; 
                                                                                         RecipeOntology:hasValue 28;
                                                                                         RecipeOntology:hasUnit "grams"^^xsd:string]],
-                										
-                  															[
-                                          						rdf:type RecipeOntology:NutritionContent;
-                                                                RecipeOntology:ofNutritionType	RecipeOntology:Iron;
-                                                                RecipeOntology:ofNutritionQuantity [
-                                                                  						rdf:type RecipeOntology:Quantity;
+                                                        
+                                                                            [
+                                                                rdf:type RecipeOntology:Nutrition;
+                                                                RecipeOntology:nutrientName "Iron"^^xsd:String;
+                                                                RecipeOntology:hasNutritionQuantity [
+                                                                                        rdf:type RecipeOntology:Quantity;
+                                                                                        rdf:type RecipeOntology:NutritionQuantity; 
                                                                                         RecipeOntology:hasValue 2.1;
-                                                                                        RecipeOntology:hasUnit "milligrams"^^xsd:string]]].
-                                                 				
-
-                                                   
-                                        
-#ex:Instructions	rdf:type RecipeOntology:Instruction;
-#				schema:hasRecipeInstructions "Preheat oven to 450 degrees.  Line a large baking sheet with parchment paper.  Place a wire cooling rack onto the baking sheet. Set aside."^^xsd:string,
-#											 "Wash wings in cold water and pat thoroughly dry with paper towels."^^xsd:string,
-#                                             "Place the wings into a bowl and toss well with the vegetable oil until well coated."^^xsd:string,
-#											"Whisk together the brown sugar, chipotle powder, chili powder, oregano, dry mustard, seasoning salt, salt, and ground black pepper."^^xsd:string,
-#											"Pour the dry rub over the chicken wings and massage until very well coated. Marinate in the fridge for 30 minutes."^^xsd:string,
-#											"Generously coat the wire rack with the non-stick cooking spray. Then, place each wing onto the rack in a single layer. Do not over lap."^^xsd:string,
-#											"Bake for 50 minutes. Remove from oven and plate. Garnish and serve immediately."^^xsd:string.
-
-ex:Instructions	rdf:type RecipeOntology:Instruction;
-				schema:hasRecipeInstructions [
-                					rdf:type rdf:Seq;
-                					rdf:li	"Preheat oven to 450 degrees.  Line a large baking sheet with parchment paper.  Place a wire cooling rack onto the baking sheet. Set aside."^^xsd:string;
-									rdf:li	"Wash wings in cold water and pat thoroughly dry with paper towels."^^xsd:string;
-                                    rdf:li	"Place the wings into a bowl and toss well with the vegetable oil until well coated."^^xsd:string;
-									rdf:li	"Whisk together the brown sugar, chipotle powder, chili powder, oregano, dry mustard, seasoning salt, salt, and ground black pepper."^^xsd:string;
-									rdf:li	"Pour the dry rub over the chicken wings and massage until very well coated. Marinate in the fridge for 30 minutes."^^xsd:string;
-									rdf:li	"Generously coat the wire rack with the non-stick cooking spray. Then, place each wing onto the rack in a single layer. Do not over lap."^^xsd:string;
-									rdf:li	"Bake for 50 minutes. Remove from oven and plate. Garnish and serve immediately."^^xsd:string].	
+                                                                                        RecipeOntology:hasUnit "milligrams"^^xsd:string]].         
