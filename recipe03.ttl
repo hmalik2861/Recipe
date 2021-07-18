@@ -1,0 +1,165 @@
+@prefix : <http://www.semanticweb.org/hammad/ontologies/2021/2RecipeOntology> .
+@prefix ex: <http://example.org/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix RecipeOntology: <http://www.semanticweb.org/hammad/ontologies/2021/2RecipeOntology#> .
+@base <http://www.semanticweb.org/hammad/ontologies/2021/2RecipeOntology> .
+
+<http://www.semanticweb.org/hammad/ontologies/2021/2RecipeOntology> rdf:type owl:Ontology .
+
+#################################################################
+#    Recipe-Objects
+#################################################################
+
+
+
+RecipeOntology:FriedRice rdf:type schema:Recipe ;
+                                        RecipeOntology:hasTitle "Fried Rice"^^xsd:string;
+                                        schema:image    "https://www.gimmesomeoven.com/wp-content/uploads/2017/07/How-To-Make-Fried-Rice-Recipe-2-1.jpg"^^xsd:string;
+                                        schema:author [
+                                                    rdf:type RecipeOntology:Person;
+                                                    rdf:type RecipeOntology:Author;        
+                                                    schema:name "Gimme some Oven"^^xsd:string];
+                                       schema:tool	[
+                                       				rdf:type RecipeOntology:BakingEquipment;
+                                       				rdf:type RecipeOntology:Pan;
+                                       				RecipeOntology:toolName "Non-stick Pan"];
+                                        RecipeOntology:wasDerivedFrom [
+                                                        rdf:type RecipeOntology:Source;
+                                                        schema:url  "https://www.gimmesomeoven.com/fried-rice-recipe/#tasty-recipes-62154"^^xsd:anyURI];
+                                        schema:aggregateRating [
+                                          rdf:type schema:AggregateRating;
+                                          rdf:type RecipeOntology:RecipeRating;         
+                                                   schema:reviewCount 885;
+                                                   schema:ratingCount 4.9];
+                                        RecipeOntology:hasDifficultyLevel [
+                                                    rdf:type RecipeOntology:DifficultyLevel;
+                                                    RecipeOntology:difficultyLevel "Medium"^^xsd:string];
+                                        RecipeOntology:hasMealType [
+                                          			rdf:type RecipeOntology:RecipeClassification;
+                                                    rdf:type RecipeOntology:MealType;
+                                                    rdf:type RecipeOntology:Lunch;
+                                        			rdf:type RecipeOntology:Dinner];
+                                        RecipeOntology:RecipeCuisine [
+                                          			rdf:type RecipeOntology:RecipeClassification;
+                                                    rdf:type    RecipeOntology:AsianCuisine;
+                                                    rdf:type    RecipeOntology:RecipeCuisine];
+                                        RecipeOntology:RecipeType [
+                                          			rdf:type RecipeOntology:RecipeClassification;
+                                                    rdf:type    RecipeOntology:MainCourse;
+                                                    rdf:type    RecipeOntology:RecipeCourse];
+                                        RecipeOntology:hasTotalTime [
+                                                    rdf:type RecipeOntology:TotalTime;
+                                                    rdf:type schema:Time;        
+                                                             RecipeOntology:hasCookTime [
+                                                                rdf:type RecipeOntology:CookTime; 
+                                                                RecipeOntology:cookTime "10 Minutes"^^xsd:string];
+                                                             RecipeOntology:hasPrepTime [
+                                                                rdf:type RecipeOntology:PrepTime;
+                                                                RecipeOntology:prepTime "5 Minutes"^^xsd:string]];
+                                        schema:recipeYield [
+                                                   rdf:type RecipeOntology:Quantity;
+                                                   rdf:type RecipeOntology:YieldQuantity;         
+                                                   RecipeOntology:hasValue 6;
+                                                   RecipeOntology:hasUnit "serving"^^xsd:string];
+                                        schema:hasRecipeInstructions [
+                                                    rdf:type RecipeOntology:Instruction;
+                                                    schema:hasRecipeInstructions "Heat 1/2 tablespoon of butter in a large saut� pan over medium-high heat until melted.Add egg, and cook until scrambled, stirring occasionally. Remove egg, and transfer to aseparate plate."^^xsd:string,
+                                                    "Add an additional 1 tablespoon butter to the pan and heat until melted. Add carrots,onion, peas and garlic, and season with a generous pinch of salt and pepper. Saut� for about 5 minutes or until the onion and carrots are soft. Increase heat to high, add in theremaining 1 1/2 tablespoons of butter, and stir until melted. Immediately add the rice,green onions, soy sauce and oyster sauce (if using), and stir until combined. Continuesaut�ing for an additional 3 minutes to fry the rice, stirring occasionally. (I like to let therice rest for a bit between stirs so that it can crisp up on the bottom.) Then add in theeggs and stir to combine. Remove from heat, and stir in the sesame oil until combined. Taste and season with extra soy sauce, if needed."^^xsd:string,
+                                                    "Serve immediately, or refrigerate in a sealed container for up to 3 days"^^xsd:string];
+                                        schema:recipeIngredient [   
+                                                            rdf:type RecipeOntology:Ingredient;
+                                                            RecipeOntology:usedInRecipe RecipeOntology:FriedRice;
+                                                            RecipeOntology:hasIngredientName "Butter"^^xsd:String;
+                                                            RecipeOntology:hasIngredientQuantity [
+                                                                                        rdf:type RecipeOntology:Quantity;
+                                                                                        rdf:type RecipeOntology:IngredientQuantity;         
+                                                                                        RecipeOntology:hasValue 3;
+                                                                                        RecipeOntology:hasUnit "tablespoon"^^xsd:string]], 
+                                                            [   
+                                                            rdf:type RecipeOntology:Ingredient;
+                                                            RecipeOntology:usedInRecipe RecipeOntology:FriedRice;
+                                                            RecipeOntology:hasIngredientName "Egg"^^xsd:String;
+                                                            RecipeOntology:hasIngredientQuantity [
+                                                                                        rdf:type RecipeOntology:Quantity;
+                                                                                        RecipeOntology:hasValue 2;
+                                                                                        RecipeOntology:hasUnit "Piece"^^xsd:string]], 
+                                                            [   
+                                                            rdf:type RecipeOntology:Ingredient;
+                                                            RecipeOntology:usedInRecipe RecipeOntology:FriedRice;
+                                                            RecipeOntology:hasIngredientName "Peeled Carrots"^^xsd:String;
+                                                            RecipeOntology:hasIngredientQuantity [
+                                                                                        rdf:type RecipeOntology:Quantity;
+                                                                                        RecipeOntology:hasValue 2;
+                                                                                        RecipeOntology:hasUnit "Piece"^^xsd:string]], 
+                                                            [   
+                                                            rdf:type RecipeOntology:Ingredient;
+                                                            RecipeOntology:usedInRecipe RecipeOntology:FriedRice;
+                                                            RecipeOntology:hasIngredientName "Frozen Peas"^^xsd:String;
+                                                            RecipeOntology:hasIngredientQuantity [
+                                                                                        rdf:type RecipeOntology:Quantity;
+                                                                                        RecipeOntology:hasValue 0.5;
+                                                                                        RecipeOntology:hasUnit "Cup"^^xsd:string]], 
+                                                            [   
+                                                            rdf:type RecipeOntology:Ingredient;
+                                                            RecipeOntology:usedInRecipe RecipeOntology:FriedRice;
+                                                            RecipeOntology:hasIngredientName "Garlic"^^xsd:String;
+                                                            RecipeOntology:hasIngredientQuantity [
+                                                                                        rdf:type RecipeOntology:Quantity;
+                                                                                        RecipeOntology:hasValue 3;
+                                                                                        RecipeOntology:hasUnit "Piece"^^xsd:string]], 
+                                                            [   
+                                                            rdf:type RecipeOntology:Ingredient;
+                                                            RecipeOntology:usedInRecipe RecipeOntology:FriedRice;
+                                                            RecipeOntology:hasIngredientName "Salt"^^xsd:String;
+                                                            ], 
+                                                            [   
+                                                            rdf:type RecipeOntology:Ingredient;
+                                                            RecipeOntology:usedInRecipe RecipeOntology:FriedRice;
+                                                            RecipeOntology:hasIngredientName "Pepper"^^xsd:String;
+                                                            ], 
+                                                            [   
+                                                            rdf:type RecipeOntology:Ingredient;
+                                                            RecipeOntology:usedInRecipe RecipeOntology:FriedRice;
+                                                            RecipeOntology:hasIngredientName "Rice"^^xsd:String;
+                                                            RecipeOntology:hasIngredientQuantity [
+                                                                                        rdf:type RecipeOntology:Quantity;
+                                                                                        RecipeOntology:hasValue 4;
+                                                                                        RecipeOntology:hasUnit "Cup"^^xsd:string]], 
+                                                            [   
+                                                            rdf:type RecipeOntology:Ingredient;
+                                                            RecipeOntology:usedInRecipe RecipeOntology:FriedRice;
+                                                            RecipeOntology:hasIngredientName "Green Onion"^^xsd:String;
+                                                            RecipeOntology:hasIngredientQuantity [
+                                                                                        rdf:type RecipeOntology:Quantity;
+                                                                                        RecipeOntology:hasValue 3;
+                                                                                        RecipeOntology:hasUnit "piece"^^xsd:string]], 
+                                                            [   
+                                                            rdf:type RecipeOntology:Ingredient;
+                                                            RecipeOntology:usedInRecipe RecipeOntology:FriedRice;
+                                                            RecipeOntology:hasIngredientName "Soy sauce"^^xsd:String;
+                                                            RecipeOntology:hasIngredientQuantity [
+                                                                                        rdf:type RecipeOntology:Quantity;
+                                                                                        RecipeOntology:hasValue 3;
+                                                                                        RecipeOntology:hasUnit "tablespoon"^^xsd:string]],
+															[   
+                                                            rdf:type RecipeOntology:Ingredient;
+                                                            RecipeOntology:usedInRecipe RecipeOntology:FriedRice;
+                                                            RecipeOntology:hasIngredientName "Oyster sauce"^^xsd:String;
+                                                            RecipeOntology:hasIngredientQuantity [
+                                                                                        rdf:type RecipeOntology:Quantity;
+                                                                                        RecipeOntology:hasValue 2;
+                                                                                        RecipeOntology:hasUnit "teaspoon"^^xsd:string]],
+                                                            [   
+                                                            rdf:type RecipeOntology:Ingredient;
+                                                            RecipeOntology:usedInRecipe RecipeOntology:FriedRice;
+                                                            RecipeOntology:hasIngredientName "Toasted Sesame Oil"^^xsd:String;
+                                                            RecipeOntology:hasIngredientQuantity [
+                                                                                    rdf:type RecipeOntology:Quantity;
+                                                                                    RecipeOntology:hasValue 0.5;
+                                                                                    RecipeOntology:hasUnit "teaspoon"^^xsd:string]].
+                                            
